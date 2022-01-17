@@ -11,15 +11,21 @@ export default function SpacesContainer(){
     const [isLoading, setIsLoading] = useState(true)
 
     fetch(NASA_BASE_URL)
-    .then(resp => resp.json())
-    .then(data => setAllSpaces(data))
-    setIsLoading(false)
+    .then(resp => {
+        if(resp.ok){
+            resp.json().then((data) => setAllSpaces(data))
+            setIsLoading(false)
+        }
+    },[])
+  
+    // setIsLoading(false)
 
-    if (isLoading) return <div>Page is loading</div>
+     if (isLoading) return <div>Please wait while we load the images...</div>
     return (
         <div>
             <h1>Spacestagram</h1>
             <SpacesView allSpaces = {allSpaces}/>
         </div>
     )
+
 }
