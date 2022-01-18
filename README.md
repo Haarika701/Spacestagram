@@ -1,3 +1,10 @@
+# Spacestagram
+The application displays the images of universe with description and date. The images are loaded using NASA's APOD (Astronomy Picture of the Day) API. 
+This application was built using React and styled using Material -UI and deployed using Netlify.
+
+To view the application,click on the following link:
+https://spacestagram-8378.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
