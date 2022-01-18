@@ -3,10 +3,8 @@ import { useState } from "react"
 import SpacesView from "./SpacesView"
 export default function SpacesContainer(){
 
-    const NASA_BASE_URL = `https://api.nasa.gov/planetary/apod?api_key=0JqA3znQkwnAI7ImklsVVD9i0lfmbebahzsyu84z&start_date=2021-09-01&end_date=2021-09-30`
-     
-
-
+    const NASA_BASE_URL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&start_date=2021-11-01&end_date=2021-11-30`
+    console.log(process.env.REACT_APP_API_KEY)
     const[allSpaces,setAllSpaces] = useState([])
     const [isLoading, setIsLoading] = useState(true)
 
@@ -18,12 +16,10 @@ export default function SpacesContainer(){
         }
     },[])
   
-    // setIsLoading(false)
-
-     if (isLoading) return <div>Please wait while we load the images...</div>
+     if (isLoading) return <div className="spaces-load">Please wait while we load the images...</div>
     return (
-        <div>
-            <h1>Spacestagram</h1>
+        <div className="spaces-container">
+           
             <SpacesView allSpaces = {allSpaces}/>
         </div>
     )

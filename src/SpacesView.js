@@ -4,7 +4,7 @@ export default function SpacesView({allSpaces}){
 
     const displaySpaces = allSpaces.map((space )=> {return <SpacesCard key = {space.date} space = {space}/>})
     return (
-        <div>
+        <div className="spaces-view">
             {displaySpaces}
         </div>
     )
