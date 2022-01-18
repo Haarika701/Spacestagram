@@ -25,23 +25,29 @@
 }
 
 .spaces-card .MuiTypography-body2{
- color: #054569;
+  margin-top: 15px;
+ color:  #5d6475;
+ ;
 }
-.spaces-card .MuiTypography-h3{
+.spaces-card .MuiTypography-h4{
   color: #054569;
  }
  .spaces-card .MuiTypography-h5{
-  color: #054569;
+  margin-top: 15px;
+  color: #5d6475;
+  ;
  }
 
-.spaces-card .button{
+button{
   margin-bottom: 2.5%;
-  border-radius: 12px;
+  border-radius: 6px;
+  background-color : white;
+  width: 50px;
 }
 
-.spaces-card .button:hover {
+button:hover {
   background-color:#9ccddc;
-  color: white;
+  
 }
  
 

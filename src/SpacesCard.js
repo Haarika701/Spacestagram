@@ -12,11 +12,11 @@ export default function SpacesView({space}){
 
     return (
         <div className="spaces-card">
-            <Card sx={{ maxWidth: 400 }}>
+            <Card sx={{ maxWidth: 380 }}>
            
-            <img src = {space.url} alt = "img" width="400px" height="400px"/>
+            <img src = {space.url} alt = "img" width="380px" height="380px"/>
             <CardContent>
-            <Typography variant="h3">
+            <Typography variant="h4">
             {space.title}
             </Typography>
             <Typography variant = "h5">
